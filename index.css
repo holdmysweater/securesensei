@@ -1,0 +1,143 @@
+#main {
+    background-image: url('pics/mbg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    height: 100svh;
+    background-size: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainText {
+    font-size: 2rem;
+    background: var(--colorPanel);
+    color: var(--colorText);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.infoGrid {
+    display: grid;
+    gap: 128px 64px;
+    padding: 64px;
+    grid-template-areas:
+        "info1 info2"
+        "info3 info4"
+        "info6 info5"
+        "info7 info8";
+    grid-template-columns: 1fr 1fr;
+    background: var(--colorBackground);
+    color: var(--colorText);
+    border-top: 2px solid var(--colorSpec);
+    justify-items: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.info1 {
+    grid-area: info1;
+}
+
+.info2 {
+    grid-area: info2;
+}
+
+.info3 {
+    grid-area: info3;
+}
+
+.info4 {
+    grid-area: info4;
+}
+
+.info5 {
+    grid-area: info5;
+}
+
+.info6 {
+    grid-area: info6;
+}
+
+.info7 {
+    grid-area: info7;
+}
+
+.info8 {
+    grid-area: info8;
+}
+
+.info4 ul{
+    position: relative;
+    left: 1rem;
+}
+
+.infoImg {
+    width: 25vw;
+}
+
+.reviewsCont {
+    position: relative;
+}
+
+.review1 {
+    color: var(--colorBackground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 1vw;
+    position: absolute;
+    left: 25.5%;
+    top: 56%;
+    width: 60%;
+    height: 7.5%;
+}
+
+.review2 {
+    color: var(--colorBackground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 1vw;
+    position: absolute;
+    left: 25.5%;
+    top: 66%;
+    width: 60%;
+    height: 9%
+}
+
+@media screen and (max-width: 1200px) {
+    #main {
+      background-size: 250vh;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #mainText {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .infoGrid {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        gap: 64px;
+    }
+
+    .infoImg {
+        width: 1vw;
+    }
+
+    .review1 {
+        font-size: 1vw;
+    }
+
+    .review2 {
+        font-size: 3vw;
+    }
+}

@@ -1,0 +1,154 @@
+:root {
+    --colorBackground: #000000;
+    --colorPanel: #000000;
+    --colorSelection: #dd4430;
+    --colorText: #c7945a;
+    --colorSpec: #dd4430;
+}
+
+body, html {
+    font-family: tahoma, sans-serif;
+    scrollbar-color: var(--colorSpec) var(--colorPanel);
+    scrollbar-width: thin;
+    background: var(--colorBackground);
+    /*overflow: hidden;*/
+}
+
+::-webkit-scrollbar {
+    background: var(--colorPanel);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--colorSpec);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.menuToggle {
+    display: none;
+}
+
+.navbar {
+    background: var(--colorPanel);
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    border-bottom: 2px solid var(--colorSpec);
+}
+
+.navbarMenu {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.navbarLink {
+    padding: 0 0.3rem;
+    height: 100%;
+    color: var(--colorText);
+    text-decoration: none;
+}
+
+.logoContainer {
+    height: 100%;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+    color: #dd4430;
+    text-decoration: none;
+}
+
+#navbarLogo {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+
+.navbarLink:hover { 
+    background-color: var(--colorSelection); 
+    transition: all 0.2s ease;
+}
+
+.navbarLink:focus { 
+    background-color: var(--colorSelection); 
+    transition: all 0.2s ease;
+}
+
+@media screen and (max-width: 1200px) {
+    .logoContainer p {
+      display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 900px) {
+    .navbarMenu {
+        display: grid;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: -500%;
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    .navbarLink{
+        display: block;
+        width: 100vw;
+        border-bottom: 2px solid var(--colorSpec);
+    }
+
+    .navbarMenu.active {
+        background: var(--colorPanel);
+        color: var(--colorText);
+        top: 3rem;
+        opacity: 1;
+        transition: all 0.4s ease;
+    }
+
+    .bar {
+        height: 4px;
+        width: 32px;
+        margin: 4px;
+        border-radius: 2px;
+        background: var(--colorText);
+        transition: all 0.4s ease;
+    }
+
+    .menuToggle.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .menuToggle.active .bar:nth-child(1){
+        transform: translateX(4px) translateY(8px) rotate(75deg);
+    }
+
+    .menuToggle.active .bar:nth-child(3){
+        transform: translateX(-4px) translateY(-8px) rotate(-75deg);
+    }
+
+    .menuToggle {
+        display: block;
+        margin: 0.5rem;
+        height: 2rem;
+        cursor: pointer;
+        transform: all 0.2s ease;
+    }
+}
