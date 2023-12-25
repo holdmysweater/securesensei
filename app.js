@@ -4,7 +4,7 @@ const links = document.querySelectorAll('.mainLink');
 
 
 menu.addEventListener('click', toggleMenu);
-updateLinks();
+
 
 function toggleMenu(){
     menu.classList.toggle('active');

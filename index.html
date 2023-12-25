@@ -85,35 +85,38 @@
 				<h1 id="section-3">Обратная связь</h1>
 			</div>
 			<div id="mainPanel">
-				<form id="formBox" onsubmit="sendEmail();">
+				<form id="form" onsubmit="">
 					<a class="lngReadBefore"></a>
 					<div id="textBox">
 						<div id="detailsColumn">
 							<div class="column">
-								<a class="lngQType">Тип вопроса</a>
-								<select id="messageType" class="input">
-									<option value="AppTechQ" class="lngAppQ">Вопрос</option>
-									<option value="CoopQ" class="lngCoopQ">Предложение о сотрудничестве</option>
-									<option value="AppIdea" class="lngAppIdea">Проблемы</option>
+								<a class="lngQType">Тема</a>
+								<select class="input" name="subject" id="messageType">
+									<option value="Подписаться на рассылку" class="lngAppQ">Подписаться на рассылку</option>
+									<option value="Предложение о сотрудничестве" class="lngCoopQ">Предложение о сотрудничестве</option>
+									<option value="Вопрос" class="lngAppIdea">Вопрос</option>
 								</select>
 							</div>
 							<div class="column">
+								<a class="lngQEmail">ФИО</a>
+								<input class="input" type="text" name="name" id="name" placeholder="Еремин Боб Семенович" required autofocus>
+							</div>
+							<div class="column">
 								<a class="lngQEmail">Ваша почта</a>
-								<input class="input" type="text" id="mail" placeholder="samplemail@com.mail" required>
+								<input class="input" type="email" name="email" id="email" placeholder="bob@mail.ru" required autofocus>
 							</div>
 							<div class="column">
-								<a class="lngQConfirm">Подтвердите почту</a>
-								<input class="input" type="text" id="mailTest" placeholder="samplemail@com.mail" required>
-								<a id="wrong" class="lngWrongEmail">Почты не совпадают</a>
+								<a class="lngQConfirm">Номер телефона</a>
+								<input class="input" type="number" name="tel" placeholder="89123091210" required autofocus>
 							</div>
 							<div class="column">
-								<a class="lngQSubject">Тема</a>
-								<input class="input" type="text" id="subject" required>
+								<a class="lngQSubject">Хочу получать рассылку</a>
+								<input class="input" type="checkbox" name="needSpam" id="needSpam" value 1>
 							</div>
 						</div>
 						<div id="messageColumn">
-							<a class="lngQMessage">Сообщение</a>
-							<textarea class="input" id="message" cols="20" rows="15" required></textarea>
+							<a class="lngQMessage">Дополнительное сообщение</a>
+							<textarea class="input" id="message" name="message" cols="20" rows="15"></textarea>
 						</div>
 					</div>
 					<div>
@@ -126,7 +129,6 @@
 	</div>
 
 	<!-- SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS SCRIPTS -->
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script src="contactus.js"></script>
 	<script src="app.js"></script>
 </body>

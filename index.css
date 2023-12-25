@@ -215,22 +215,3 @@
     border-radius: 4px;
     padding: 4px;
 }
-
-@media screen and (max-width: 900px) {
-    #main {
-        font-size: 1rem;
-        padding: 8px;
-    }
-
-    #mainPanel{
-        padding: 8px;
-        width: auto;
-    }
-
-    #textBox {
-        flex-direction: column;
-    }
-}
-
-@media screen and(max-aspect-ratio: 1/1) {
-}
