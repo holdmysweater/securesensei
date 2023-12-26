@@ -1,9 +1,12 @@
 const applicantForm = document.getElementById('form')
+const sentText = document.getElementById('sent')
 applicantForm.addEventListener('submit', handleFormSubmit)
 
 function handleFormSubmit(event) {
   event.preventDefault()
   data = serializeForm(applicantForm)
+  sentText.classList.add('active')
+  applicantForm.reset()
 
  subject = data[0].value
  nameUser = data[1].value

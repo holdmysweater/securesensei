@@ -156,7 +156,7 @@
 
 #sent {
     display: none;
-    color:darkgreen;
+    color:green;
 }
 
 #sent.active {
@@ -208,10 +208,40 @@
     gap: 8px;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
 .input {
+    accent-color: var(--colorSpec);
     background: var(--colorBackground);
     color: var(--colorText);
     border: 1px solid var(--colorSpec);
     border-radius: 4px;
     padding: 4px;
+}
+
+input[type='checkbox']{
+  width: 14px !important;
+  height: 14px !important;
+  margin: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: 1px solid var(--colorSpec);
+  box-shadow: none;
+  font-size: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  line-height: 7px;
+  background: var(--colorBackground);
+}
+
+input[type='checkbox']:checked:after {
+    content: '✔';
+    color: var(--colorSpec);
 }

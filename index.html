@@ -109,19 +109,19 @@
 								<a class="lngQConfirm">Номер телефона</a>
 								<input class="input" type="number" name="tel" placeholder="89123091210" required autofocus>
 							</div>
-							<div class="column">
+							<div class="row">
 								<a class="lngQSubject">Хочу получать рассылку</a>
-								<input class="input" type="checkbox" name="needSpam" id="needSpam" value 1>
+								<input class="input" type="checkbox" name="needSpam" id="needSpam" value 1 checked="true">
+							</div>
+							<div class="row">
+								<button type="submit" class="lngContactSend input">Отправить</button>
+								<a id="sent" class="lngSentEmail">Отправлено!</a>
 							</div>
 						</div>
 						<div id="messageColumn">
 							<a class="lngQMessage">Дополнительное сообщение</a>
 							<textarea class="input" id="message" name="message" cols="20" rows="15"></textarea>
 						</div>
-					</div>
-					<div>
-						<button type="submit" class="lngContactSend input">Отправить</button>
-						<a id="sent" class="lngSentEmail">Отправлено!</a>
 					</div>
 				</form>
 			</div>
